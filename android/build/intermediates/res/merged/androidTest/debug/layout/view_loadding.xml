@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="正在保存中..."
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#BE333333"
+        android:textColor="#ffffff"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+</LinearLayout><!-- From: file:/Users/RocWang/Documents/studySpace/01_ReactNativeSpace/VideoMaker/node_modules/react-native-video-recorder/android/src/main/res/layout/view_loadding.xml --><!-- From: file:/Users/RocWang/Documents/studySpace/01_ReactNativeSpace/VideoMaker/node_modules/react-native-video-recorder/android/build/intermediates/bundles/debug/res/layout/view_loadding.xml -->

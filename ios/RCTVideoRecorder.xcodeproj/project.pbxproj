@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8BFE11A1DF6511C00B669E0 /* RCTVideoRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BFE1191DF6511C00B669E0 /* RCTVideoRecorder.m */; };
+		D8BFE11B1DF6511C00B669E0 /* RCTVideoRecorder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D8BFE1181DF6511C00B669E0 /* RCTVideoRecorder.h */; };
+		D8BFE1541DF6535400B669E0 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BFE1451DF6535400B669E0 /* CircleView.m */; };
+		D8BFE1551DF6535400B669E0 /* PBJGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BFE1481DF6535400B669E0 /* PBJGLProgram.m */; };
+		D8BFE1561DF6535400B669E0 /* PBJMediaWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BFE14A1DF6535400B669E0 /* PBJMediaWriter.m */; };
+		D8BFE1571DF6535400B669E0 /* PBJVision.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BFE14C1DF6535400B669E0 /* PBJVision.m */; };
+		D8BFE1581DF6535400B669E0 /* PBJVisionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BFE14E1DF6535400B669E0 /* PBJVisionUtilities.m */; };
+		D8BFE1591DF6535400B669E0 /* ShortVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BFE1521DF6535400B669E0 /* ShortVideoViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D8BFE1131DF6511C00B669E0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				D8BFE11B1DF6511C00B669E0 /* RCTVideoRecorder.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D8BFE1151DF6511C00B669E0 /* libRCTVideoRecorder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTVideoRecorder.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8BFE1181DF6511C00B669E0 /* RCTVideoRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTVideoRecorder.h; sourceTree = "<group>"; };
+		D8BFE1191DF6511C00B669E0 /* RCTVideoRecorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTVideoRecorder.m; sourceTree = "<group>"; };
+		D8BFE1441DF6535400B669E0 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		D8BFE1451DF6535400B669E0 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		D8BFE1471DF6535400B669E0 /* PBJGLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJGLProgram.h; sourceTree = "<group>"; };
+		D8BFE1481DF6535400B669E0 /* PBJGLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJGLProgram.m; sourceTree = "<group>"; };
+		D8BFE1491DF6535400B669E0 /* PBJMediaWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJMediaWriter.h; sourceTree = "<group>"; };
+		D8BFE14A1DF6535400B669E0 /* PBJMediaWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJMediaWriter.m; sourceTree = "<group>"; };
+		D8BFE14B1DF6535400B669E0 /* PBJVision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJVision.h; sourceTree = "<group>"; };
+		D8BFE14C1DF6535400B669E0 /* PBJVision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJVision.m; sourceTree = "<group>"; };
+		D8BFE14D1DF6535400B669E0 /* PBJVisionUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJVisionUtilities.h; sourceTree = "<group>"; };
+		D8BFE14E1DF6535400B669E0 /* PBJVisionUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJVisionUtilities.m; sourceTree = "<group>"; };
+		D8BFE1501DF6535400B669E0 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		D8BFE1511DF6535400B669E0 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		D8BFE1521DF6535400B669E0 /* ShortVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortVideoViewController.m; sourceTree = "<group>"; };
+		D8BFE1531DF6535400B669E0 /* ShortVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortVideoViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8BFE1121DF6511C00B669E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8BFE10C1DF6511C00B669E0 = {
+			isa = PBXGroup;
+			children = (
+				D8BFE1171DF6511C00B669E0 /* RCTVideoRecorder */,
+				D8BFE1161DF6511C00B669E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8BFE1161DF6511C00B669E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8BFE1151DF6511C00B669E0 /* libRCTVideoRecorder.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8BFE1171DF6511C00B669E0 /* RCTVideoRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				D8BFE1431DF6535400B669E0 /* ShortVideo */,
+				D8BFE1521DF6535400B669E0 /* ShortVideoViewController.m */,
+				D8BFE1531DF6535400B669E0 /* ShortVideoViewController.h */,
+				D8BFE1181DF6511C00B669E0 /* RCTVideoRecorder.h */,
+				D8BFE1191DF6511C00B669E0 /* RCTVideoRecorder.m */,
+			);
+			path = RCTVideoRecorder;
+			sourceTree = "<group>";
+		};
+		D8BFE1431DF6535400B669E0 /* ShortVideo */ = {
+			isa = PBXGroup;
+			children = (
+				D8BFE1441DF6535400B669E0 /* CircleView.h */,
+				D8BFE1451DF6535400B669E0 /* CircleView.m */,
+				D8BFE1461DF6535400B669E0 /* Source */,
+			);
+			path = ShortVideo;
+			sourceTree = "<group>";
+		};
+		D8BFE1461DF6535400B669E0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D8BFE1471DF6535400B669E0 /* PBJGLProgram.h */,
+				D8BFE1481DF6535400B669E0 /* PBJGLProgram.m */,
+				D8BFE1491DF6535400B669E0 /* PBJMediaWriter.h */,
+				D8BFE14A1DF6535400B669E0 /* PBJMediaWriter.m */,
+				D8BFE14B1DF6535400B669E0 /* PBJVision.h */,
+				D8BFE14C1DF6535400B669E0 /* PBJVision.m */,
+				D8BFE14D1DF6535400B669E0 /* PBJVisionUtilities.h */,
+				D8BFE14E1DF6535400B669E0 /* PBJVisionUtilities.m */,
+				D8BFE14F1DF6535400B669E0 /* Shaders */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D8BFE14F1DF6535400B669E0 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				D8BFE1501DF6535400B669E0 /* Shader.fsh */,
+				D8BFE1511DF6535400B669E0 /* Shader.vsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8BFE1141DF6511C00B669E0 /* RCTVideoRecorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8BFE11E1DF6511C00B669E0 /* Build configuration list for PBXNativeTarget "RCTVideoRecorder" */;
+			buildPhases = (
+				D8BFE1111DF6511C00B669E0 /* Sources */,
+				D8BFE1121DF6511C00B669E0 /* Frameworks */,
+				D8BFE1131DF6511C00B669E0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCTVideoRecorder;
+			productName = RCTVideoRecorder;
+			productReference = D8BFE1151DF6511C00B669E0 /* libRCTVideoRecorder.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8BFE10D1DF6511C00B669E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = RocWang;
+				TargetAttributes = {
+					D8BFE1141DF6511C00B669E0 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = F8A29S732G;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D8BFE1101DF6511C00B669E0 /* Build configuration list for PBXProject "RCTVideoRecorder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D8BFE10C1DF6511C00B669E0;
+			productRefGroup = D8BFE1161DF6511C00B669E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8BFE1141DF6511C00B669E0 /* RCTVideoRecorder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8BFE1111DF6511C00B669E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8BFE1561DF6535400B669E0 /* PBJMediaWriter.m in Sources */,
+				D8BFE1551DF6535400B669E0 /* PBJGLProgram.m in Sources */,
+				D8BFE1571DF6535400B669E0 /* PBJVision.m in Sources */,
+				D8BFE1591DF6535400B669E0 /* ShortVideoViewController.m in Sources */,
+				D8BFE1581DF6535400B669E0 /* PBJVisionUtilities.m in Sources */,
+				D8BFE1541DF6535400B669E0 /* CircleView.m in Sources */,
+				D8BFE11A1DF6511C00B669E0 /* RCTVideoRecorder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D8BFE11C1DF6511C00B669E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D8BFE11D1DF6511C00B669E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8BFE11F1DF6511C00B669E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = F8A29S732G;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D8BFE1201DF6511C00B669E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = F8A29S732G;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8BFE1101DF6511C00B669E0 /* Build configuration list for PBXProject "RCTVideoRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8BFE11C1DF6511C00B669E0 /* Debug */,
+				D8BFE11D1DF6511C00B669E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8BFE11E1DF6511C00B669E0 /* Build configuration list for PBXNativeTarget "RCTVideoRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8BFE11F1DF6511C00B669E0 /* Debug */,
+				D8BFE1201DF6511C00B669E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8BFE10D1DF6511C00B669E0 /* Project object */;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.yuanyinguoji.video.View.CameraGLView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content">
+
+        <com.yuanyinguoji.video.View.CircleBar
+            android:layout_width="wrap_content"
+            android:id="@+id/circlebar"
+            android:layout_centerVertical="true"
+            android:rotation="270"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/img_swcith"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imageView" />
+
+    </RelativeLayout>
+
+</FrameLayout><!-- From: file:/Users/RocWang/Documents/studySpace/01_ReactNativeSpace/VideoMaker/node_modules/react-native-video-recorder/android/src/main/res/layout/view_video.xml --><!-- From: file:/Users/RocWang/Documents/studySpace/01_ReactNativeSpace/VideoMaker/node_modules/react-native-video-recorder/android/build/intermediates/bundles/debug/res/layout/view_video.xml -->

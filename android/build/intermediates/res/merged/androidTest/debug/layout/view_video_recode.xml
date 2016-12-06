@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yuanyinguoji.video.View.VideoRecoderView
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.yuanyinguoji.video.View.PlayerView
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout><!-- From: file:/Users/RocWang/Documents/studySpace/01_ReactNativeSpace/VideoMaker/node_modules/react-native-video-recorder/android/src/main/res/layout/view_video_recode.xml --><!-- From: file:/Users/RocWang/Documents/studySpace/01_ReactNativeSpace/VideoMaker/node_modules/react-native-video-recorder/android/build/intermediates/bundles/debug/res/layout/view_video_recode.xml -->
