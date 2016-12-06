@@ -36,7 +36,9 @@ RCT_EXPORT_METHOD(navToVideoRecorder)
     _viewController.delegate = self;
 
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:(_viewController)];
-    [root presentViewController:nav animated:YES completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [root presentViewController:nav animated:YES completion:nil];
+    });
 }
 
 //保存按钮的点击事件
