@@ -1,7 +1,7 @@
 {
   "name": "react-native-video-recorder",
   "version": "0.0.1",
-  "description": "",
+  "description": "`to be continued`",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,13 @@
     "video"
   ],
   "author": "rocwang",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rocwangv/react-native-video-recorder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rocwangv/react-native-video-recorder/issues"
+  },
+  "homepage": "https://github.com/rocwangv/react-native-video-recorder#readme"
 }

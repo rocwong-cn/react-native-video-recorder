@@ -10,7 +10,7 @@ A module for react-native to record video by system camera ,  will return a loca
 
 ## SUPORT
 
-IOS ONLY for now
+Both IOS and android.
 
 ## METHODS
 
