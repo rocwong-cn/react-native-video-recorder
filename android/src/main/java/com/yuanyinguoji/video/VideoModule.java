@@ -2,6 +2,7 @@ package com.yuanyinguoji.video;
 
 import android.content.Intent;
 import android.support.annotation.Nullable;
+import android.widget.Toast;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
@@ -17,6 +18,7 @@ import com.yuanyinguoji.video.View.Loadding;
 
 public class VideoModule extends ReactContextBaseJavaModule{
     private static ReactApplicationContext mContext;
+    public static boolean isFinish =false;//是否关闭模块
     private Loadding mLodding;
     public VideoModule(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -35,18 +37,27 @@ public class VideoModule extends ReactContextBaseJavaModule{
         mContext.startActivity(intent);
     }
 
+//    @ReactMethod
+//    public void hideLoading(boolean flag){
+//        if(mLodding==null){
+//            mLodding= new Loadding(mContext);
+//        }
+//        if(flag){
+//            mLodding.show();
+//        }else{
+//            if(mLodding.isShowing()){
+//                mLodding.dismiss();
+//            }
+//        }
+//    }
+
     @ReactMethod
     public void hideLoading(boolean flag){
-        if(mLodding==null){
-            mLodding= new Loadding(mContext);
+        if(!flag){
+            Toast.makeText(mContext, "上传视频失败", Toast.LENGTH_SHORT).show();
         }
-        if(flag){
-            mLodding.show();
-        }else{
-            if(mLodding.isShowing()){
-                mLodding.dismiss();
-            }
-        }
+        isFinish = flag;
+        Loadding.dismissLoadding();
     }
 
     private static void sendEvent(ReactContext reactContext,
