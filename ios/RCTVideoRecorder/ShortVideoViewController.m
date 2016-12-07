@@ -239,7 +239,7 @@ static NSString * const PBJViewControllerPhotoAlbum = @"PBJVision";
 - (void)saveVideo{
     NSString *videoPath = [_currentVideo  objectForKey:PBJVisionVideoPathKey];
     [self.delegate saveVideoWithPath:videoPath];
-    [self showViewWithMesssage:@"正在保存中..."];
+    [self showViewWithMesssage:@"上传中..."];
 }
 
 - (void)showViewWithMesssage:(NSString *)text{
@@ -249,12 +249,11 @@ static NSString * const PBJViewControllerPhotoAlbum = @"PBJVision";
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,rect.size.width + 40, rect.size.height+ 20)];
     
     _messsageView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.bounds), CGRectGetHeight([UIScreen mainScreen].bounds) - 64)];
-
     textLabel.layer.masksToBounds = YES;
     textLabel.layer.cornerRadius = 8;
     textLabel.center = CGPointMake(self.view.center.x, CGRectGetHeight(self.view.bounds)/3.0);
-    textLabel.backgroundColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.75];
-    textLabel.textColor = [UIColor blackColor];
+    textLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.75];
+    textLabel.textColor = [UIColor whiteColor];
     textLabel.textAlignment = NSTextAlignmentCenter;
     textLabel.font = font;
     textLabel.text = text;
