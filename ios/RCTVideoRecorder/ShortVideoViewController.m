@@ -37,8 +37,9 @@ static NSString * const PBJViewControllerPhotoAlbum = @"PBJVision";
 @property (nonatomic, strong) UIImageView *isPlayImage;
 @property (nonatomic, assign) BOOL isPlay; // 判断播放还是暂停
 @property (nonatomic, assign) BOOL isShow;  //时否展示提示框；
-@property (nonatomic, strong) UIView *messsageView;
+@property (nonatomic, strong) UIView *messageView;
 @property(nonatomic,strong)UIButton *contentView;
+@property(nonatomic,strong)UILabel *messageLab;
 
 
 @end
@@ -49,7 +50,8 @@ static NSString * const PBJViewControllerPhotoAlbum = @"PBJVision";
     [super viewDidLoad];
     self.isShow  = NO;
     [self addRecordView];
-    self.title = @"小视频";
+    self.title = @"短视频";
+    self.view.backgroundColor = [UIColor blackColor];
     self.navigationController.navigationBar.backgroundColor = [UIColor blackColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
@@ -241,14 +243,15 @@ static NSString * const PBJViewControllerPhotoAlbum = @"PBJVision";
     [self.delegate saveVideoWithPath:videoPath];
     [self showViewWithMesssage:@"上传中..."];
 }
-
 - (void)showViewWithMesssage:(NSString *)text{
     UIFont *font = [UIFont boldSystemFontOfSize:16];
     NSDictionary * dict=[NSDictionary dictionaryWithObject: font forKey:NSFontAttributeName];
     CGRect rect=[text boundingRectWithSize:CGSizeMake(250,CGFLOAT_MAX) options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil];
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,rect.size.width + 40, rect.size.height+ 20)];
-    
-    _messsageView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.bounds), CGRectGetHeight([UIScreen mainScreen].bounds) - 64)];
+    [_messageView removeFromSuperview];
+    _messageView = nil;
+    _messageView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.bounds), CGRectGetHeight([UIScreen mainScreen].bounds) - 64)];
+    _messageLab = textLabel;
     textLabel.layer.masksToBounds = YES;
     textLabel.layer.cornerRadius = 8;
     textLabel.center = CGPointMake(self.view.center.x, CGRectGetHeight(self.view.bounds)/3.0);
@@ -258,27 +261,45 @@ static NSString * const PBJViewControllerPhotoAlbum = @"PBJVision";
     textLabel.font = font;
     textLabel.text = text;
     textLabel.numberOfLines = 0;
-    [_messsageView addSubview:textLabel];
-    [[UIApplication sharedApplication].keyWindow addSubview:_messsageView];
+    [_messageView addSubview:textLabel];
+    [[UIApplication sharedApplication].keyWindow addSubview:_messageView];
     self.isShow = YES;
     __weak typeof (self)temp = self;
     self.clickAction = ^(BOOL is){
         if (is == YES) {
-            textLabel.text = @"";
-            [temp.messsageView removeFromSuperview];
-            temp.messsageView = nil;
+            _messageLab.text = @"";
+            [temp.messageView removeFromSuperview];
+            temp.messageView = nil;
             [temp clearVideo];
-            
+            NSLog(@"succcess video");
             [temp dismissViewControllerAnimated:YES completion:nil];
         }else{
-            textLabel.text = @"上传失败...";
-            [temp performSelector:@selector(messageLabClear) withObject:nil afterDelay:1.2f];
+            NSLog(@"fail video");
+            [_messageView removeFromSuperview];
+            [temp saveVideoFailAction];
         }
     };
 }
 
+- (void)saveVideoFailAction{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"上传视屏失败，是否重新上传" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"继续上传");
+        [self saveVideo];
+
+    }];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"取消上传");
+    }];
+    [alert addAction:action2];
+    [alert addAction:action1];
+    [self presentViewController:alert animated:YES completion:^{
+
+    }];
+}
 - (void)messageLabClear{
-    [_messsageView removeFromSuperview];
+    [_messageView removeFromSuperview];
+    _messageView = nil;
 }
 
 - (void)clearPromptView{
