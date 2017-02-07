@@ -22,6 +22,7 @@ package com.yuanyinguoji.video.encoder;
  * All files in the folder are under this Apache License, Version 2.0.
 */
 
+import android.annotation.TargetApi;
 import android.media.MediaCodec;
 import android.media.MediaCodecInfo;
 import android.media.MediaCodecList;
@@ -34,7 +35,7 @@ import android.view.Surface;
 import com.yuanyinguoji.video.glutils.RenderHandler;
 
 import java.io.IOException;
-
+@TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
 public class MediaVideoEncoder extends MediaEncoder {
 	private static final boolean DEBUG = false;	// TODO set false on release
 	private static final String TAG = "MediaVideoEncoder";

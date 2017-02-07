@@ -12,6 +12,8 @@ import com.yuanyinguoji.video.View.Loadding;
 import com.yuanyinguoji.video.View.VideoAndPlayer;
 import com.yuanyinguoji.video.utils.FileUtils;
 
+import java.io.File;
+
 /**
  * Created by wa on 2016/11/21.
  */
@@ -32,16 +34,19 @@ public class VideoActivity extends Activity{
                     @Override
                     public void onDismiss(DialogInterface dialogInterface) {
                         Log.e("tag", "loading is dismiss");
-                        if (VideoModule.isFinish)
+                        if (VideoModule.isFinish){
                             finish();
+                        }
 
                     }
                 });
                 mOutput=output;
+                File file = new File(output);
                 WritableMap params = Arguments.createMap();
-                params.putString("path",output);
+                String contentUrl = String.valueOf(FileUtils.getImageContentUri(VideoActivity.this,file));
+                params.putString("path",contentUrl);
+                Log.e("TAG","contentUrl:"+contentUrl);
                 VideoModule.setEvent("onVideoSave",params);
-                finish();
             }
         });
     }

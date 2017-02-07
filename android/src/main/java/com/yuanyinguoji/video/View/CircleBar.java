@@ -38,7 +38,7 @@ public class CircleBar extends View {
 
     private RectF reactF;//进度条的大小
 
-    private boolean isStart =false;
+    private boolean isStart = false;
 
     private OnTouchListener mTouchListener;
 
@@ -56,7 +56,7 @@ public class CircleBar extends View {
 
     private void init(AttributeSet attrs) {
         defWidth = ScreenUtils.getScreenWidth(mContext) / 5;
-        radius = defWidth/ 2;//直径是屏幕宽度的6分之一
+        radius = defWidth / 2;//直径是屏幕宽度的6分之一
         isStart = false;
         initLocation();
         initPaint();
@@ -65,7 +65,7 @@ public class CircleBar extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        setMeasuredDimension((int)defWidth+20,(int)defWidth+20);//初始化控件大小，现在为固定值
+        setMeasuredDimension((int) defWidth + 20, (int) defWidth + 20);//初始化控件大小，现在为固定值
     }
 
     @Override
@@ -89,10 +89,11 @@ public class CircleBar extends View {
         //初始化进度条
         reactF = new RectF(cx - radius, cy - radius, cx + radius, cy + radius);
     }
+
     //初始化位置，固定在屏幕下方中间位置
-    private void initLocation(){
-        cx = radius+10;
-        cy = radius+10;
+    private void initLocation() {
+        cx = radius + 10;
+        cy = radius + 10;
     }
 
     /**
@@ -123,26 +124,36 @@ public class CircleBar extends View {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 Log.e("TAG", "ACTION_DOWN");
+                cancelTimer();
+                mTimeCount.start();
+                if (mTouchListener != null) {
+                    mTouchListener.onStart();
+                }
                 break;
             case MotionEvent.ACTION_UP:
                 Log.e("TAG", "ACTION_UP");
-                if(!isStart){
-                    cancelTimer();
-                    mTimeCount.start();
-                    if(mTouchListener!=null){
-                        mTouchListener.onStart();
-                    }
-                    isStart=true;
-                }else{
-                    cancelTimer();
-                    if(mTouchListener!=null){
-                        mTouchListener.onStop();
-                    }
+                cancelTimer();
+                if (mTouchListener != null) {
+                    mTouchListener.onStop();
                 }
+//                if(!isStart){
+//                    cancelTimer();
+//                    mTimeCount.start();
+//                    if(mTouchListener!=null){
+//                        mTouchListener.onStart();
+//                    }
+//                    isStart=true;
+//                }else{
+//                    cancelTimer();
+//                    if(mTouchListener!=null){
+//                        mTouchListener.onStop();
+//                    }
+//                }
                 break;
         }
         return true;
     }
+
     //取消定时器，并初始化部分数据
     private void cancelTimer() {
         mTimeCount.cancel();
@@ -162,10 +173,11 @@ public class CircleBar extends View {
 
     /**
      * 设置按钮监听
+     *
      * @param touchListener
      */
-    public void setOnViewTouchListener(OnTouchListener touchListener){
-        mTouchListener =touchListener;
+    public void setOnViewTouchListener(OnTouchListener touchListener) {
+        mTouchListener = touchListener;
     }
 
     class TimeCount extends CountDownTimer {
@@ -176,8 +188,8 @@ public class CircleBar extends View {
         @Override
         public void onFinish() {// 计时完毕
             cancelTimer();
-            isStart=false;
-            if(mTouchListener!=null){
+            isStart = false;
+            if (mTouchListener != null) {
                 mTouchListener.onStop();
             }
         }
@@ -185,7 +197,7 @@ public class CircleBar extends View {
         @Override
         public void onTick(long millisUntilFinished) {// 计时过程
             postInvalidate();
-            mCurrTime+=refreshTime;//增加页面角度
+            mCurrTime += refreshTime;//增加页面角度
         }
     }
 }

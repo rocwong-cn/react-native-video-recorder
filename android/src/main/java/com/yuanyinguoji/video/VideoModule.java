@@ -1,6 +1,7 @@
 package com.yuanyinguoji.video;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
 
@@ -32,9 +33,13 @@ public class VideoModule extends ReactContextBaseJavaModule{
 
     @ReactMethod
     public void navToVideoRecorder(){
-        Intent intent = new Intent(mContext,VideoActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        mContext.startActivity(intent);
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.JELLY_BEAN_MR2){
+            Intent intent = new Intent(mContext,VideoActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            mContext.startActivity(intent);
+        }else{
+            Toast.makeText(mContext, "暂时不支持此机型录制视频", Toast.LENGTH_SHORT).show();
+        }
     }
 
 //    @ReactMethod

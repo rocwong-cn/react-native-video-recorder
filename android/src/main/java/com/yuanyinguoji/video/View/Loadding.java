@@ -28,13 +28,16 @@ public class Loadding extends Dialog {
         if (sLoadding == null) {
             sLoadding = new Loadding(context);
         }
-        sLoadding.show();
-        sLoadding.setOnDismissListener(onDismissListener);
+        if (!context.isFinishing()) {
+            sLoadding.show();
+            sLoadding.setOnDismissListener(onDismissListener);
+        }
     }
 
     public static void dismissLoadding() {
         if (sLoadding != null && sLoadding.isShowing()) {
             sLoadding.dismiss();
+            sLoadding =null;
         }
     }
 
